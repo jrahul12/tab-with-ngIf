@@ -1,0 +1,26 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-6 offset-3">
+
+      <ul class="nav nav-pills">
+        <li class="nav-item" *ngFor="let skill of skills">
+          <a
+            class="nav-link"
+            [class.active]="selectedSkill === skill.key"
+            (click)="onSelect(skill.key)">
+            {{ skill.key | uppercase }}
+          </a>
+        </li>
+      </ul>
+
+      <hr>
+
+      <div *ngFor="let skill of skills">
+        <div *ngIf="selectedSkill === skill.key">
+          <p><strong>{{skill.title}} </strong>{{ skill.description }}</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
