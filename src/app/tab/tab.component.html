@@ -1,0 +1,59 @@
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6 offset-3">
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a class="nav-link" [class.active]="selectedSkill === 'html'" (click)="onSelect('html')">
+                        HTML
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" [class.active]="selectedSkill === 'css'" (click)="onSelect('css')">
+                        CSS
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" [class.active]="selectedSkill === 'javascript'"
+                        (click)="onSelect('javascript')">
+                        JavaScript
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" [class.active]="selectedSkill === 'angular'" (click)="onSelect('angular')">
+                        Angular
+                    </a>
+                </li>
+            </ul>
+
+            <hr>
+
+            <div *ngIf="selectedSkill === 'html'">
+                <h4><strong>1.HTML</strong></h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ipsam sapiente odit maxime
+                    aspernatur voluptas earum aliquam distinctio officia recusandae!</p>
+            </div>
+
+            <div *ngIf="selectedSkill === 'css'">
+                <h4><strong>2.CSS</strong></h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ipsam sapiente odit maxime
+                    aspernatur voluptas earum aliquam distinctio officia recusandae!</p>
+            </div>
+
+            <div *ngIf="selectedSkill === 'javascript'">
+                <h4><strong>3.JavaScript </strong></h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ipsam sapiente odit maxime
+                    aspernatur voluptas earum aliquam distinctio officia recusandae!</p>
+            </div>
+
+            <div *ngIf="selectedSkill === 'angular'">
+                <h4><strong>4.Angular</strong></h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium ipsam sapiente odit maxime
+                    aspernatur voluptas earum aliquam distinctio officia recusandae!</p>
+            </div>
+
+        </div>
+    </div>
+</div>
